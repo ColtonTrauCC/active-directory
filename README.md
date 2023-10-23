@@ -28,7 +28,7 @@ This lab demonstrates how to install and configure Active Directory using Azure.
 
 <h2>Installation Steps</h2>
 
-<h3>Setting up Resources in Azure/h3>
+<h3>Setting up Resources in Azure</h3>
 
 <p>
   <ul>
