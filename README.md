@@ -40,7 +40,7 @@ This lab demonstrates how to install and configure Active Directory using Azure.
     <ul>
       <li><img src = "https://github.com/ColtonTrauCC/active-directory/assets/147654000/2ba43657-9799-46d3-9140-c9952282614e" height="80%" width="80%"/></li>
     </ul>
-    <li>After the VMs are created, we'll set their IP Addresses as <i>static</i> since having them dynamically will make them difficult for the VMs to communicate with each other.</li>
+    <li>After the VMs are created, we'll set the Domain Controller's IP Address as <i>static</i> since having it dynamic will make them difficult for the VM to communicate with our client VM.</li>
     <li>Go to your Virtual Machines in Azure and go to <b>Networking</b> then go to the link listed next to <b>Network Interface</b>. Head to <b>IP Configurations</b> under <b>settings</b>, go to the ipconfig link to open up a window to toggle the IP configuration and allocation to <b>Static</b>.</li>
     <ul>
       <li>IP Configuration for the Domain VM</li>
