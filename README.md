@@ -51,6 +51,25 @@ This lab demonstrates how to install and configure Active Directory using Azure.
 
 <br />
 
+<h3>Ensuring Connectivity</h3>
+
+<p>
+  <ul>
+    <li>Logging in to the Client VM, open the Command Prompt and enter the command <b>ping [Domain Controller Private IP Address] -t</b> to endlessly send ping in order ensure reachability with the Domain Controller. Connection should time out after the first ping due to the Domain Controller's Firewall Settings.</li>
+    <ul>
+      <li><img src = "https://github.com/ColtonTrauCC/active-directory/assets/147654000/be2faa69-d835-4222-a105-b6f5201c018f" height = 80% width = 80% /></li>
+    </ul>
+    <li>Logging into the Domain Controller VM, go to the <b>Windows Defender Firewall with Advanced Security</b>. Head to the <b>Inbound Rules</b> and enable the rules under the protocol <b>ICMPv4</b>, specifically <i>Core Networking Diagnostics - ICMP Echo Request (ICMPv4-In)</i></li>
+    <ul>
+	    <li><img src = "https://github.com/ColtonTrauCC/active-directory/assets/147654000/63bef2fe-62b6-4230-aac2-d6528f038bc5" height = 80% width = 80% /></li>
+    </ul>
+    <li>Head back to the Client VM, and we should now be seeing replies</li>
+    <ul>
+	    <li><img src = "https://github.com/ColtonTrauCC/active-directory/assets/147654000/0918e56e-4fe8-497e-aa05-e9e4b3139042" height = 80% width = 80% /></li>
+    </ul>
+  </ul>
+</p>
+
 <br />
 
 <h2>Configuration Steps</h2>
