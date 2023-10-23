@@ -3,7 +3,7 @@
 </p>
 
 <h1 align = "center">Installing and Configuring Active Directory in Microsoft Azure</h1>
-This lab demonstrates the steps I took to install Active Directory using Azure. I will be using this as the foundation for labs I will do in the future. I will be using two VMs on Azure that are on the same vnet. This particular lab will focus on just one of the VMs, which will be used to install Active Directory and configured to be the domain controller. The other VM will be used as a client that will join later in a future lab. 
+This lab demonstrates how to install and configure Active Directory using Azure. We will be using two VMs on Azure that are on the same virtual network. One VM will be installed with Active Directory and configured to be the <b>Domain Controller</b> and other VM will be used as a <b>client</b>. 
 
 <br />
 
@@ -28,11 +28,18 @@ This lab demonstrates the steps I took to install Active Directory using Azure. 
 
 <h2>Installation Steps</h2>
 
-<h3></h3>
+<h3>Setting up the VMs</h3>
 
 <p>
   <ul>
-    <li></li>
+    <li>Our Client VM should be installed normally using the Windows 10 image (OS)</li>
+    <ul>
+      <li>Tutorial on how to install VMs can be found <b><a href ="https://github.com/ColtonTrauCC/vm-network">here</a></b></li>
+    </ul>      
+    <li>Our Domain Controller VM using Active Directory should be created using the image <b>Windows Server 2022 Datacenter: Azure Edition - x64 Gen2</b></li>
+    <ul>
+      <li><img src = "https://github.com/ColtonTrauCC/active-directory/assets/147654000/2ba43657-9799-46d3-9140-c9952282614e" height="80%" width="80%"/></li>
+    </ul>
   </ul>
 </p>
 
@@ -41,5 +48,13 @@ This lab demonstrates the steps I took to install Active Directory using Azure. 
 <br />
 
 <h2>Configuration Steps</h2>
+
+<h3></h3>
+
+<p>
+  <ul>
+    <li></li>
+  </ul>
+</p>
 
 <br />
