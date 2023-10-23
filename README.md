@@ -84,7 +84,6 @@ This lab demonstrates how to install and configure Active Directory using Azure.
 	  <ul>
 	    <li><img src = "https://github.com/ColtonTrauCC/active-directory/assets/147654000/af0fb9e9-2f55-4fb0-a372-487d2dab317e" height = 80% width = 80% /></li>
 	    <li><img src = "https://github.com/ColtonTrauCC/active-directory/assets/147654000/fb6b02e1-2e22-4147-aede-1d126c634ec8" height = 80% width = 80% /></li>
-	    <li><img src = "https://github.com/ColtonTrauCC/active-directory/assets/147654000/a0f67658-a103-4055-ac9a-da272ca4aea1" height = 80% width = 80% /></li>
     	 </ul>
   </ul>
 </p>
