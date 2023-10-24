@@ -95,7 +95,7 @@ This lab demonstrates how to install and configure Active Directory using Azure.
 <p>
   <ul>
     <li>When logging back in to the domain controller VM through Remote Desktop Connection, it is important to log in with the <b>context of the domain.</b></li>
-    <li>Type out the domain path and then the name of the user. For example: <b>mydomain.com\labuser.</b></li>  
+    <li>Type out the domain path and then the name of the user. For example: <b>mydomain.com/labuser.</b></li>  
   </ul>
 </p>
 
@@ -134,7 +134,52 @@ This lab demonstrates how to install and configure Active Directory using Azure.
     <ul>
 	    <li><img src = "https://github.com/ColtonTrauCC/active-directory/assets/147654000/09ba39f8-0e5c-4d64-b276-ab10af8a0efd" height = 80% width = 80% /></li>
     </ul>
-    <li></li>
+    <li>In the System menu of the client VM, click on Rename this PC (advanced) and Change.</li>
+    <li>Enter the domain and necessary credentials in order to let the client join the domain (logging in as jane_admin). It is important to note that the login credentials have to be input within the context of the domain path (mydomain.com\jane_admin).</li>
+    <ul>
+	    <li><img src = "https://github.com/ColtonTrauCC/active-directory/assets/147654000/49ec7774-3dd4-4c62-81fe-91da91d80d08" height = 80% width = 80% /></li>
+    </ul>
+    <li>The client should now be part of the domain (A popup should appear welcoming you to the domain). On the domain controller, the client should now appear in Computers in the Active Directory Users and Computers panel.</li>
+    <ul>
+	    <li><img src = "https://github.com/ColtonTrauCC/active-directory/assets/147654000/a8ef09bf-36e2-4aab-8c44-d99d7b3fcb7a" height = 80% width = 80% /></li>
+    </ul>  
+  </ul>
+</p>
+
+<br />
+
+<h3>Setup Remote Desktop for non-administrative users on Client VM</h3>
+
+<p>
+  <ul>
+    <li>Before users in the domain can use the client computer, Remote Desktop has to be enabled for non-administrative users.</li>
+    <li>While logged in as the administrator (jane_admin), open <b>System Properties</b>. Click on <b>Remote Desktop</b> and Select users that can remotely access this PC.</li>  
+    <li>Allow Domain Users access to Remote Desktop. Non-administrative users can now log in to the Client.</li>
+    <ul>
+	    <li><img src = "https://github.com/ColtonTrauCC/active-directory/assets/147654000/96e3a27f-83fd-40c3-86bc-f3532c24bf6b" height = 80% width = 80% /></li>
+    </ul>
+  </ul>
+</p>
+
+<br />
+
+<h3>Creating Users and attempt to log into the Client VM with one of the users</h3>
+
+<p>
+  <ul>
+    <li>In the Domain Controller VM logged in as jane_admin, open <b>Powershell ISE</b> as an administrator</li>
+    <li>Using <a href = "https://github.com/joshmadakor1/AD_PS/blob/master/Generate-Names-Create-Users.ps1">this powershell script</a>, we will create thousands of randomly generated accounts all with the password "Password1"</li>
+    <li>In Powershell ISE, create a new file and copy-and-paste the powershell script into the file and then run the script</li>
+    <ul>
+	    <li>All these users are generated and put into the _EMPLOYEES Organizational Unit in the Active Directory</li>
+	    <li><img src = "https://github.com/ColtonTrauCC/active-directory/assets/147654000/0033e7ae-6446-46d1-ae13-3873d475e8ac" height = 80% width = 80% /></li>
+    </ul>
+    <li>Head to the Active Directory Users and Computers console and select a random username and obtain their login information by going to <b>Properties</b> and in the <b>Account</b> tab</li>
+    <ul>
+	    <li>The username generate should appear as <b>[first name].[last name]</b>, in this image the user is selecting "falojo.kugori"</li>
+	    <li><img src = "https://github.com/ColtonTrauCC/active-directory/assets/147654000/569cac00-65bf-4315-be16-6f502fb44b49" height = 80% width = 80% /></li>
+    </ul>
+    <li>Attempt to log in the Client VM using the generate username you have selected (username being <b>mydomain.com\username</b>) and the password "Password1"</li>
   </ul>
 </p>
 
