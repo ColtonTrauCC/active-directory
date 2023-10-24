@@ -99,12 +99,41 @@ This lab demonstrates how to install and configure Active Directory using Azure.
   </ul>
 </p>
 
+<br />
+
 <h2>Configuration Steps</h2>
 
-<h3></h3>
+<h3>Creating Organizational Units (OUs) and Users</h3>
 
 <p>
   <ul>
+    <li>OUs act like folders that hold information, privileges, and login access of users in the directory</li>
+    <li>In the Server Manager Dashboard, go to the <b>Tools</b> tab to open the Active Directory Users and Computers console, right click on the domain (mydomain.com) and make two OUs, <b>_ADMIN</b> and <b>_EMPLOYEES</b>.</li>
+	  <ul>
+		  <li>These OUs names are needed for a later step were we create multiple accounts</li>
+	  </ul>
+    <li>In the _ADMIN OU, we'll create the user <b>Jane Doe</b> with the user name <b>jane_admin</b> and password of your creation</li>
+    <ul>
+	<li><img src = "https://github.com/ColtonTrauCC/active-directory/assets/147654000/8ab7e7b5-b5c4-4da6-b748-03d452778879" height = 80% width = 80% /></li>
+    </ul>
+    <li>We'll be granting Jane admin privileges. Using the <b>Security Group</b>, right click on the user and open their <b>Properties</b>b>. Click Member Of then Add to apply the appropraite security group.</li>
+    <ul>
+	    <li><img src = "https://github.com/ColtonTrauCC/active-directory/assets/147654000/e926f68b-be89-40f5-a294-b479602f9869" height = 80% width = 80% /></li>
+    </ul>
+    <li>Now, the user Jane will be used to log in from here on, using the login username jane_admin.</li>
+  </ul>
+</p>
+
+<br />
+
+<h3>Joining the Client to the Domain</h3>
+
+<p>
+  <ul>
+    <li>First, we need to configure the Domain Name System (DNS) server. Go to your Domain Controller VM in the Azure Portal and go to <b>Networking</b> then go to the link listed next to <b>Network Interface</b>. Head to <b>DNS Servers</b> under <b>settings</b>, and set the DNS Server to <b>Custom</b>. Then, enter the domain controller's private IP address and save the changes. Restart the client VM in order to ensure the DNS changes are saved.</li>
+    <ul>
+	    <li><img src = "https://github.com/ColtonTrauCC/active-directory/assets/147654000/09ba39f8-0e5c-4d64-b276-ab10af8a0efd" height = 80% width = 80% /></li>
+    </ul>
     <li></li>
   </ul>
 </p>
