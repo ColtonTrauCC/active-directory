@@ -116,7 +116,7 @@ This lab demonstrates how to install and configure Active Directory using Azure.
     <ul>
 	<li><img src = "https://github.com/ColtonTrauCC/active-directory/assets/147654000/8ab7e7b5-b5c4-4da6-b748-03d452778879" height = 80% width = 80% /></li>
     </ul>
-    <li>We'll be granting Jane admin privileges. Using the <b>Security Group</b>, right click on the user and open their <b>Properties</b>b>. Click Member Of then Add to apply the appropraite security group.</li>
+    <li>We'll be granting Jane admin privileges. Using the <b>Security Group</b>, right click on the user and open their <b>Properties</b>. Click Member Of then Add to apply the appropraite security group.</li>
     <ul>
 	    <li><img src = "https://github.com/ColtonTrauCC/active-directory/assets/147654000/e926f68b-be89-40f5-a294-b479602f9869" height = 80% width = 80% /></li>
     </ul>
