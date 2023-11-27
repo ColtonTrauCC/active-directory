@@ -130,7 +130,7 @@ This lab demonstrates how to install and configure Active Directory using Azure.
 
 <p>
   <ul>
-    <li>First, we need to configure the Domain Name System (DNS) server. Go to your Domain Controller VM in the Azure Portal and go to <b>Networking</b> then go to the link listed next to <b>Network Interface</b>. Head to <b>DNS Servers</b> under <b>settings</b>, and set the DNS Server to <b>Custom</b>. Then, enter the domain controller's private IP address and save the changes. Restart the client VM in order to ensure the DNS changes are saved.</li>
+    <li>First, we need to configure the Domain Name System (DNS) server. Go to your Client VM in the Azure Portal and go to <b>Networking</b> then go to the link listed next to <b>Network Interface</b>. Head to <b>DNS Servers</b> under <b>settings</b>, and set the DNS Server to <b>Custom</b>. Then, enter the Domain Controller's private IP address and save the changes. Restart the client VM in order to ensure the DNS changes are saved.</li>
     <ul>
 	    <li><img src = "https://github.com/ColtonTrauCC/active-directory/assets/147654000/09ba39f8-0e5c-4d64-b276-ab10af8a0efd" height = 80% width = 80% /></li>
     </ul>
